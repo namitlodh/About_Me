@@ -30,6 +30,21 @@
   <input [(ngModel)]="name" placeholder="Your name" />
   <p *ngIf="name">Hello, {{ name }}!</p>
 </div>
+<div class="about-me-details">
+  <button 
+    (click)="toggleDetails()" 
+    [attr.aria-expanded]="showDetails"
+    class="toggle-button"
+  >
+    {{ showDetails ? 'Hide Details' : 'Show About Me Details' }}
+  </button>
+
+  <ul *ngIf="showDetails" class="details-list">
+    <li *ngFor="let detail of details" class="detail-item">
+      <strong>{{ detail.label }}:</strong> {{ detail.value }}
+    </li>
+  </ul>
+</div>
 
 </div>
 <footer class="site-footer">

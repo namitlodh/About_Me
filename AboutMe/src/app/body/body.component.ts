@@ -11,4 +11,17 @@ import { FormsModule } from '@angular/forms';
 export class BodyComponent {
 
    name: string = '';
+   
+    showDetails = false;
+
+  details = [
+    { label: 'Experience', value: '1+ year in .Net' },
+    { label: 'Location', value: 'Mumabi, India' },
+    { label: 'Interests', value: 'Photography, Travelling, Blogging' },
+    // Add more details as needed
+  ];
+
+  toggleDetails() {
+    this.showDetails = !this.showDetails;
+  }
 }

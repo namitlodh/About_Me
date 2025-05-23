@@ -1,0 +1,15 @@
+<div class="contact-container">
+  <h2>Contact Me</h2>
+  <form (submit)="onSubmit()" class="contact-form">
+    <label for="name">Name</label>
+    <input id="name" type="text" [(ngModel)]="contact.name" name="name" required />
+
+    <label for="email">Email</label>
+    <input id="email" type="email" [(ngModel)]="contact.email" name="email" required />
+
+    <label for="message">Message</label>
+    <textarea id="message" rows="5" [(ngModel)]="contact.message" name="message" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</div>
