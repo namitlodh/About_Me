@@ -1,0 +1,5 @@
+<div style="text-align: center; margin-top: 50px;">
+  <h2>Enter your name:</h2>
+  <input [(ngModel)]="name" placeholder="Your name" />
+  <p *ngIf="name">Hello, {{ name }}!</p>
+</div>
